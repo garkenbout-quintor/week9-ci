@@ -2,10 +2,8 @@ language: java
 jdk:
   - oraclejdk11
 
-jobs:
-  include:
-    - stage: 'run mvn tests'
-      script: './mvnw test -B'
-    - # create jar
-      script: './mvnw package -DskipTests=true -B'
+script:
+  - ./mvnw install -DskipTests=true -B
+  - ./mvnw test -B
+  - ./mvnw package -DskipTests=true -B
 
