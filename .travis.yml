@@ -1,3 +1,8 @@
 language: java
 jdk:
   - oraclejdk11
+
+jobs:
+  include:
+    - stage: test
+      script: 'echo Hello'
