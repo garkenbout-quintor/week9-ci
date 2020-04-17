@@ -4,5 +4,7 @@ jdk:
 
 jobs:
   include:
-    - stage: test
-      script: 'echo Hello'
+    - stage: 'run mvn tests'
+      script: './mvnw test -B'
+    - stage: 'create jar'
+      script: './mvnw package -DskipTests=true -B'
