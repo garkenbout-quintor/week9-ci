@@ -7,3 +7,5 @@ script:
   - ./mvnw test -B
   - ./mvnw package -DskipTests=true -B
 
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
