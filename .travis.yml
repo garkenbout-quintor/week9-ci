@@ -6,5 +6,6 @@ jobs:
   include:
     - stage: 'run mvn tests'
       script: './mvnw test -B'
-    - stage: 'create jar'
+    - # create jar
       script: './mvnw package -DskipTests=true -B'
+
